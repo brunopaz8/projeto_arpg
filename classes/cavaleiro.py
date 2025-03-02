@@ -14,7 +14,7 @@ class cavaleiro:
         if self.estamina > 0:
             ataque = self.forca*2
             self.estamina -=1
-            print(f'voce jogou um meteoro {ataque}DM')
+            print(f'você jogou um meteoro {ataque} DM')
         else:
             print('você não tem mana pra isso')
 
