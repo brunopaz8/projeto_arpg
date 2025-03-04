@@ -1,44 +1,39 @@
 from classes.mago import mago
 from classes.cavaleiro import cavaleiro
+
+from menu.menu_inicial.menu_classe import escolha_classe
+from menu.menu_inicial.menu_principal import menu_principal
 import os
+import random
 
 
-usuario = cavaleiro(vida=150, forca=15,estamina=4, defesa=10, status_defesa=False)
+usuario = escolha_classe()
 
-usuario.ataque_pesado()
-usuario.escudo()
-usuario.recebendo_dano(8)
-usuario.recebendo_dano(12)
+menu_principal()
+
 
 while True:
-    menu_personagem = input(''' 
-XXXXXX Escolha Sua Classe XXXXXX
-[c] Cavaleiro
-[m] Mago
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-Sua escolha: ''')
     
-    if menu_personagem.lower() == 'c':
-        usuario = cavaleiro(vida=150, forca=15, estamina=4, defesa=10, status_defesa=False)
-        os.system('cls')
-        print('cavaleiro criado!')
-        break
-        
-    elif menu_personagem.lower() == 'm':
-        usuario =  mago(vida=100 , mana=50, forca=40, poder=10)
-        os.system('cls')
-        print('Mago criado!')
-        break
-
-while True:
-    menu_batalha_cavaleiro = input('''
-======= BATALHA ======
-[a] Ataque básico
-[s] Ataque pesado
-[d] Levantar escudo
-[f] Ultimate
-======================
-Sua escolha: ''')
+    bot = mago(vida=100 , mana=50, forca=40, poder=10)
+    ataque_bot = random.randint(1,5)
+    
+    if ataque_bot == 1 or ataque_bot == 2 or ataque_bot == 3:
+        bot.ataque_basico()
+    elif ataque_bot == 4:
+        bot.ataque_pesado()
+    elif ataque_bot == 5:
+        bot.ultimate()
+    
+    menu_batalha_cavaleiro = input(f'''
+  Sua vida:{usuario.vida}            Vida do oponente:{bot.vida}             
+                                   
+    ======= ATAQUES ======
+    [a] Ataque básico
+    [s] Ataque pesado
+    [d] Levantar escudo
+    [f] Ultimate
+    ======================
+    Sua escolha: ''')
     
     if menu_batalha_cavaleiro.lower() == 'a':
         os.system('cls')
@@ -49,6 +44,9 @@ Sua escolha: ''')
     elif menu_batalha_cavaleiro.lower() == 'd':
         os.system('cls')
         usuario.escudo()
-    elif menu_batalha_cavaleiro() == 'f':
+    elif menu_batalha_cavaleiro.lower() == 'f':
         os.system('cls')
         usuario.ultimate()
+    else:
+        os.system('cls')
+        print('Opção inválida!')

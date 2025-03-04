@@ -30,9 +30,9 @@ class cavaleiro:
         if self.estamina > estamina_necessaria:
             ataque = self.poder * 3
             self.estamina -= estamina_necessaria
-            print(f'ataque pesado realizado')
+            print(f'ataque pesado realizado{ataque}')
         else:
-            print('O ataque falhou! Você não tem mana pra isso!')
+            print('O ataque falhou! Você não tem estamina pra isso!')
    
     def recebendo_dano(self, dano):
         if self.status_defesa == True and self.defesa >= dano:

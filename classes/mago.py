@@ -29,4 +29,4 @@ class mago():
     def recebendo_dano(self, dano):
         self.vida -= dano
         print('apanhou')
-
+    
