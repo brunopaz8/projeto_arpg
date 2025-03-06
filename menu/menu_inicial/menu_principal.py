@@ -15,7 +15,6 @@ Sua escolha:''')
     
         if menu_principal.lower() == 'a':
             os.system('cls')
-            print('Batalha iniciando...')
             return 
         elif menu_principal.lower() == 's':
             os.system('cls')

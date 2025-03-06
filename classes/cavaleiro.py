@@ -8,22 +8,22 @@ class cavaleiro:
     
     def ataque_basico(self):
         ataque = self.forca
-        print(f'Você atacou com a espada causando {ataque} DM')
+        print(f'Atacou com a espada! causando {ataque} DM')
 
     def ataque_pesado(self):
         if self.estamina > 0:
             ataque = self.forca*2
             self.estamina -=1
-            print(f'você jogou um meteoro {ataque} DM')
+            print(f'Usou o ataque pesado! {ataque} DM')
         else:
-            print('você não tem mana pra isso')
+            print('Não tem estamina pra isso!')
 
     def  escudo(self):
         if self.status_defesa == True:
             print('O escudo ainda esta ativo !')
         else:
             self.status_defesa = True
-            print('Voce preparou o escudo!')
+            print('Levantou o escudo!')
       
     def ultimate(self):
         estamina_necessaria = 5
@@ -32,17 +32,17 @@ class cavaleiro:
             self.estamina -= estamina_necessaria
             print(f'ataque pesado realizado{ataque}')
         else:
-            print('O ataque falhou! Você não tem estamina pra isso!')
+            print('O ataque falhou! não tem estamina pra isso!')
    
     def recebendo_dano(self, dano):
         if self.status_defesa == True and self.defesa >= dano:
-            print('Voce defendeu o ataque')
+            print('Defendeu o ataque')
         elif self.status_defesa == True and self.defesa < dano:
             ataque = dano - self.defesa
             self.vida -= ataque
-            print(f'Voce tomou {ataque} de dano')
+            print(f'Tomou {ataque} de dano')
         else:
             self.vida -= dano
-            print(f'Voce tomou: {dano}DM')
+            print(f'Tomou: {dano}DM')
 
         
