@@ -1,7 +1,7 @@
 import os
 import random
 
-def batalha_cavaleiro(usuario, bot):
+def batalha_mago(usuario, bot):
     inicio = True  
 
     while True:
@@ -30,14 +30,14 @@ def batalha_cavaleiro(usuario, bot):
                 print('===================\n')
 
         menu_batalha = input(f'''
-Sua vida:{usuario.vida}            Vida do oponente:{bot.vida}  
-Estamina:{usuario.estamina}         
+Sua vida:{usuario.vida}            Vida do oponente:{bot.vida}   
+Mana:{usuario.mana}        
 
 ======= ATAQUES ======
-[a] Ataque básico
-[s] Ataque pesado
-[d] Levantar escudo
-[f] Ultimate
+[a] Bola de fogo
+[s] Meteoro
+[d] Auto-cura
+[f] Chuva de meteoro
 ======================
 Sua escolha: ''')
 
@@ -65,10 +65,13 @@ Sua escolha: ''')
        
         else:
             print('Opção inválida!')
-        
+
         if usuario.vida == 0:
+            os.system('cls')
             print('Você perdeu! :(')
             break
+        
         elif bot.vida == 0:
+            os.system('cls')
             print('Você ganhou! :)')
             break
