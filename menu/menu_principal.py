@@ -15,11 +15,19 @@ Sua escolha:''')
         if menu_principal.lower() == 'a':
             os.system('cls')
             return
+        
         elif menu_principal.lower() == 's':
             os.system('cls')
             Ver_personagem(usuario= usuario, escolha= escolha)
              
-        else:
+        elif menu_principal.lower() == 'd':
             os.system('cls')
             print('ainda em desenvolvimento')
+        elif menu_principal.lower() == 'f':
+            os.system('cls')
+            print('Sistema finalizando...')
+            break
+        else:
+            os.system('cls')
+            print('Opção inválida!')
             
