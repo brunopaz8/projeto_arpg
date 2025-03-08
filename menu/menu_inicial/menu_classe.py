@@ -13,16 +13,14 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 Sua escolha: ''')
     
         if escolha.lower() == 'c':
-            usuario = cavaleiro(vida=150, forca=15, estamina=4, defesa=10, status_defesa=False)
             os.system('cls')
-            print('cavaleiro criado!')
-            return usuario, escolha
+            print('Criando um cavaleiro!')
+            return escolha
         
         elif escolha.lower() == 'm':
-           usuario =  mago(vida=100 , mana=50, forca=40, poder=10)
            os.system('cls')
-           print('Mago criado!')
-           return usuario, escolha
+           print('Criando um mago!')
+           return escolha
         else:
             os.system('cls')
             print('Opção inválida!')

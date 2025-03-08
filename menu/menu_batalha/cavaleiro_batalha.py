@@ -66,9 +66,12 @@ Sua escolha: ''')
         else:
             print('Opção inválida!')
         
-        if usuario.vida == 0:
+        if usuario.vida <= 0:
+            os.system('cls')
             print('Você perdeu! :(')
             break
-        elif bot.vida == 0:
+        
+        elif bot.vida <= 0:
+            os.system('cls')
             print('Você ganhou! :)')
             break

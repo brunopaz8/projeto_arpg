@@ -1,11 +1,13 @@
 from classes.bot import bot_classe
 from menu.menu_inicial.menu_classe import escolha_classe
+from menu.menu_inicial.criando_personagem import criando_personagem
 from menu.menu_principal import menu_principal
 from menu.menu_batalha.cavaleiro_batalha import batalha_cavaleiro
 from menu.menu_batalha.mago_batalha import batalha_mago
 
 
-usuario, escolha = escolha_classe()
+escolha = escolha_classe()
+usuario = criando_personagem(escolha= escolha)
 
 if escolha.lower() == 'c':
     menu_principal(usuario= usuario, escolha= escolha)

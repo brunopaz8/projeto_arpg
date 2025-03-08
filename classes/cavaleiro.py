@@ -30,7 +30,7 @@ class cavaleiro:
     def ultimate(self):
         estamina_necessaria = 5
         if self.estamina > estamina_necessaria:
-            ataque = self.poder * 3
+            ataque = self.forca * 3
             self.estamina -= estamina_necessaria
             print(f'ataque pesado realizado{ataque}')
             return ataque

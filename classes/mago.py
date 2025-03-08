@@ -7,7 +7,7 @@ class mago():
         self.poder = poder
         
     def ataque_basico(self):
-          ataque = self.poder
+          ataque = self.forca
           print(f'Jogou uma bola de fogo {ataque}DM')
           return ataque
 
@@ -21,7 +21,7 @@ class mago():
             print('O ataque falhou! não tem mana pra isso!')
     
     def habilidade (self):
-        cura = self.poder*2
+        cura = self.poder - 5
         self.vida += cura
         print(f'Cura! {cura}DM')
     
