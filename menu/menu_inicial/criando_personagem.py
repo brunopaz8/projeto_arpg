@@ -77,8 +77,8 @@ XXXXXXXX Mago XXXXXXXX
 
 Você tem: {pontos} pontos restantes
 
-Vida:{vida_mago}+        Mana:{mana}+
-Força:{forca_mago}+        Poder:{poder}+
+[a]Vida:{vida_mago}+        [d]Mana:{mana}+
+[s]Força:{forca_mago}+        [f]Poder:{poder}+
 
 Para confirmar as mudanças selecione 'q'!
 
@@ -100,13 +100,13 @@ Sua escolha: ''')
             
              elif escolha_status.lower() == 'd' and pontos > 0:
                 os.system('cls')
-                print('Estamina aumentada!')
+                print('Mana aumentada!')
                 mana += 5
                 pontos -= 1
             
              elif escolha_status.lower() == 'f' and pontos > 0:
                 os.system('cls')
-                print('Defesa aumentada!')
+                print('Poder aumentado!')
                 poder += 5
                 pontos -= 1
            
